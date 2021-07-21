@@ -1,7 +1,3 @@
-if (confirm('Souhaitez-vous confirmer?')) {
-     //OUI
-     alert('OK');
-} else {
-     //NON
-     alert('Annulation');
-}
+const age = prompt("Entrez votre age:");
+
+alert("Bonjour, vous avez " + age + " ans.");
