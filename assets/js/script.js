@@ -1,12 +1,17 @@
-let crie = "Toujours plus bas !"; // variable globale
+let nombreUn = 4, nombreDeux = 7;
 
-function crieDeGuerre() {
-
-     let crie = "Toujours plus fort !"; // si on met "let" dans la fonction, c'est une variable locale
-     console.log(crie);
+function add(nombreA, nombreB){
+     let result = nombreA + nombreB;
+     // console.log(result); // affiche un resultat.
+     return result;
 }
 
-crieDeGuerre();
-console.log(crie);
+function division(nombreA, nombreB){
+     let result = nombreA / nombreB;
+     return result;
+}
 
-
+// console.log(add(nombreUn, nombreDeux));
+let resultAddiction = add(nombreUn, nombreDeux);
+let resultDivision = division(nombreUn, nombreDeux);
+console.log(resultAddiction * resultDivision);
