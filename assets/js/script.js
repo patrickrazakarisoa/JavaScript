@@ -1,10 +1,21 @@
-function abracadabra() {
+// function calculerIMC(poids, taille){
 
-     let prenom = prompt("Ne compliquons pas les choses ! Quel est votre prénom?");
-     let nom = prompt("Ensuite, votre nom?");
-     let age = prompt("Enfin que age avez-vous?");
+//      // Calculer la taille en mètres.
+//      let tailleEnMetre   = taille / 100;
+//      let tailleCaclulee  = Math.pow(tailleEnMetre, 2);
+//      let result          = poids / tailleCaclulee;
 
-     alert("Sapristi ! On ne m'avait pas prévenu que c'était vous, " + prenom + " ! Euh... Je veux dire... Monsieur le grand magicien " + nom + " ! Cela fait déjà " + age + " ans que vous faites rayonner notre contrée !");
+//      // let showResult      = alert("Vous IMC est de: " + result);
+
+//      return result;     
+// }
+
+function calculerIMC(poids, taille){
+
+     return poids / Math.pow((taille/100), 2);
 }
 
-abracadabra();
+let taille    = prompt('Quelle est votre taille ? (en cm)');
+let poids     = prompt('Quel est votre poids ? (en kg)')
+
+alert(calculerIMC(poids, taille));
