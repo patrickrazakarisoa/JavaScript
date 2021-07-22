@@ -1,3 +1,6 @@
-const age = prompt("Entrez votre age:");
+function direBonjour(prenom){
+     alert("Bonjour " + prenom);
+}
 
-alert("Bonjour, vous avez " + age + " ans.");
+direBonjour("Bob");
+
