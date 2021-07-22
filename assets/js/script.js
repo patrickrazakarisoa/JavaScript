@@ -1,17 +1,12 @@
-let nombreUn = 4, nombreDeux = 7;
+let preparation = 10, cuisson = 15;
 
-function add(nombreA, nombreB){
-     let result = nombreA + nombreB;
-     // console.log(result); // affiche un resultat.
-     return result;
+function cuisiner(nombreDeGateaux, minuteDePreparation = 10, minuteDeCuisson = 15){
+
+     let resultat = nombreDeGateaux * (minuteDeCuisson + minuteDePreparation);
+     return resultat;
 }
 
-function division(nombreA, nombreB){
-     let result = nombreA / nombreB;
-     return result;
-}
+let tempsDePreparationChocolat = cuisiner(4);
+let tempsDePreparationFraisier = cuisiner(1, 20);
 
-// console.log(add(nombreUn, nombreDeux));
-let resultAddiction = add(nombreUn, nombreDeux);
-let resultDivision = division(nombreUn, nombreDeux);
-console.log(resultAddiction * resultDivision);
+console.log(tempsDePreparationFraisier + tempsDePreparationChocolat);
