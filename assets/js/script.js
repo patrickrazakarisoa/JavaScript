@@ -1,12 +1,14 @@
-let preparation = 10, cuisson = 15;
+function prevoirAge(){
 
-function cuisiner(nombreDeGateaux, minuteDePreparation = 10, minuteDeCuisson = 15){
+     let age = prompt("Quel âge avez-vous ?"); // stock en chaîne de caractère // "30" + 1 = 301 et non 30+1
+     // age = parseInt(age); // "30" = 30 
+     age = parseFloat(age);
+     // age = Number(age);
 
-     let resultat = nombreDeGateaux * (minuteDeCuisson + minuteDePreparation);
-     return resultat;
+     // nombre = 45;
+     // nombreEnString = nombre + ""; // barbare
+     // nombreEnString = nombre.toString(); // mettre un nombre en chaîne de caractrère déjà implémenter dans JavaScript
+     alert("Bientôt vous aurez " + (age + 1) +  " ans.");
 }
 
-let tempsDePreparationChocolat = cuisiner(4);
-let tempsDePreparationFraisier = cuisiner(1, 20);
-
-console.log(tempsDePreparationFraisier + tempsDePreparationChocolat);
+prevoirAge();
