@@ -1,7 +1,10 @@
-// let fonctionAnonyme = function() {
-//      console.log("Je suis une fonction anonyme.");
-// }
+function abracadabra() {
 
-// fonctionAnonyme();
+     let prenom = prompt("Ne compliquons pas les choses ! Quel est votre prénom?");
+     let nom = prompt("Ensuite, votre nom?");
+     let age = prompt("Enfin que age avez-vous?");
 
-(function() { console.log("Je suis une fonction anonyme.") }) ();
+     alert("Sapristi ! On ne m'avait pas prévenu que c'était vous, " + prenom + " ! Euh... Je veux dire... Monsieur le grand magicien " + nom + " ! Cela fait déjà " + age + " ans que vous faites rayonner notre contrée !");
+}
+
+abracadabra();
