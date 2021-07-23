@@ -1,9 +1,22 @@
-let x = 7;
+let gareDeDepart = "Valenciennes";
+let gareDArrivee = prompt("Où souhaitez-vous allez ?") || "Gard du Nord" // Valeur par défaut si le voyageur choisit de ne rien mettre NULL;
+let chauffeur    = "Bob";
 
-// ! : permet d'inverser les conditions dans IF de FALSE en TRUE dans ce cas precis.
-// x est différent de 5 mais avec " ! " x est inféreur à 5.
-if( !x < 5) {
-     console.log("x est inférieur à 5.");
+if ( (gareDeDepart != "" || gareDArrivee != "")  && chauffeur != "") {
+     alert("Le train va démarrer à destination de " + gareDArrivee + ".");
 } else {
-     console.log("x n'est pas inférieur à 5.");
+     alert("Le train ne peut pas démarrer.");
 }
+
+// let x = 2;
+
+// Une condition ternaire
+//[CONDITION] ? [TRUE] : [FALSE];
+// x > 3 ? console.log("x est supérieur à 3.") : console.log("x est inférieur à 3") ;
+
+
+// if(x > 3) {
+//      console.log("x est supérieur à 3.");
+// } else {
+//      console.log("x est inférieur à 3");
+// }
