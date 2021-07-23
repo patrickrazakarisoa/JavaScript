@@ -1,21 +1,9 @@
-// function calculerIMC(poids, taille){
+let age = 17;
 
-//      // Calculer la taille en mètres.
-//      let tailleEnMetre   = taille / 100;
-//      let tailleCaclulee  = Math.pow(tailleEnMetre, 2);
-//      let result          = poids / tailleCaclulee;
-
-//      // let showResult      = alert("Vous IMC est de: " + result);
-
-//      return result;     
-// }
-
-function calculerIMC(poids, taille){
-
-     return poids / Math.pow((taille/100), 2);
+if (age < 18) {
+     console.log("Vous n'êtes pas majeur");
+} else if ( age < 21) {
+     console.log("Vous êtes majeur en France");
+} else {
+     console.log("Vous êtes majeur partout, à vous les casinos !");
 }
-
-let taille    = prompt('Quelle est votre taille ? (en cm)');
-let poids     = prompt('Quel est votre poids ? (en kg)')
-
-alert(calculerIMC(poids, taille));
