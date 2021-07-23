@@ -1,9 +1,17 @@
-let age = 17;
+let consommable = "cholocat";
 
-if (age < 18) {
-     console.log("Vous n'êtes pas majeur");
-} else if ( age < 21) {
-     console.log("Vous êtes majeur en France");
-} else {
-     console.log("Vous êtes majeur partout, à vous les casinos !");
+switch(consommable) {
+
+     case "carotte":
+     case "courgette":
+     case "pomme de terre":
+          console.log("Ceci est un légume");
+          break;
+
+     case "banane":
+          console.log("Ceci est un fruit");
+          break;
+     
+     default:
+          console.log('Ceci n\'est ni un fruit ni un légume');
 }
