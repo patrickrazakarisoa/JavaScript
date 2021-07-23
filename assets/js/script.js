@@ -1,17 +1,9 @@
-let consommable = "cholocat";
+let gareDeDepart = "Valenciennes";
+let gareDArrivee = "";
+let chauffeur    = "";
 
-switch(consommable) {
-
-     case "carotte":
-     case "courgette":
-     case "pomme de terre":
-          console.log("Ceci est un légume");
-          break;
-
-     case "banane":
-          console.log("Ceci est un fruit");
-          break;
-     
-     default:
-          console.log('Ceci n\'est ni un fruit ni un légume');
+if ( (gareDeDepart != "" || gareDArrivee != "")  && chauffeur != "") {
+     console.log("Le train va démarrer");
+} else {
+     console.log("Le train ne peut pas démarrer.");
 }
