@@ -1,11 +1,16 @@
-// let i = 1;
+let i = 0;
 
-// while (i < 5) {
-     
-//      console.log("Ligne : " + i);
-//      i++ // i = i + 1
-// }
+while(i < 5){
 
-for (let i = 1; i < 5; i++) {
+     if( i == 3) {
+          break;
+     }
+
+     // if( i == 3) {
+     //      i++;
+     //      continue;
+     // }
+
      console.log("Ligne : " + i);
+     i++;
 }
