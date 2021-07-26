@@ -1,17 +1,18 @@
-let variableLet = "globale";
-var variableVar = "globale";
+function timer(secondes){ // 10
 
-if(true) {
-
-     let variableLet = "locale";
-     var variableVar = "locale";
-
-     console.log("let : " + variableLet);
-     console.log("var : " + variableVar);
-
+          if(secondes > 0 ){
+               console.log(secondes);
+               timer(secondes - 1); // 9
+                    // afficher 9
+                    // timer(8)
+                         // afficher 8
+                         // timer(7)
+                              // afficher 7
+                              // timer(6)
+                                   //...
+          } else {
+               console.log(secondes);
+          }
 }
 
-console.log("let : " + variableLet);
-console.log("var : " + variableVar);
-
-// Ce qu'il faut savoir ici est que le varible "var" est à chaque fois réécrit.
+timer(10);
