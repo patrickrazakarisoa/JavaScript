@@ -1,66 +1,17 @@
-function addition(nombreA, nombreB) {
-     return nombreA + nombreB;
+let variableLet = "globale";
+var variableVar = "globale";
+
+if(true) {
+
+     let variableLet = "locale";
+     var variableVar = "locale";
+
+     console.log("let : " + variableLet);
+     console.log("var : " + variableVar);
+
 }
 
-function multiplication(nombreA, nombreB) {
-     return nombreA * nombreB;
-}
+console.log("let : " + variableLet);
+console.log("var : " + variableVar);
 
-function soustration(nombreA, nombreB) {
-     return nombreA - nombreB;
-}
-
-function division(nombreA, nombreB) {
-     if(nombreB == 0) {
-          throw new Error("Impossible de diviser par 0.")
-     }
-     return nombreA / nombreB;
-}
-
-// On rentre dans la boucle principale
-let restart = false; // Cette variable vaut false ce qui veut dire que par défaut, nous ne reproposons par un calcul.
-
-do {
-    // Demande un choix
-     do {
-          var choix = Number(prompt("Que souhaitez-vous faire ? \n\n 1. Addition\n 2. Multiplication\n 3. Soustraction\n 4. Division\n"));
-     } while(choix != 1 && choix != 2 && choix != 3 && choix != 4);
-
-    // Demande deux nombres
-     do {
-          var premierNombre = Number(prompt("Entrez un premier nombre :"));
-          var deuxiemeNombre = Number(prompt("Entrez un deuxième nombre :"))
-     } while(isNaN(premierNombre) || isNaN(deuxiemeNombre)) 
-     
-     // Appelle la fonction choisie
-     try {
-
-          switch (choix) {
-               case 1:
-                    var resultat = addition(premierNombre, deuxiemeNombre);
-                    break;
-               case 2:
-                    var resultat = multiplication(premierNombre, deuxiemeNombre);
-                    break;
-               case 3:
-                    var resultat = soustration(premierNombre, deuxiemeNombre);
-                    break;
-               case 4:
-                    var resultat = division(premierNombre, deuxiemeNombre);
-                    break;
-               default:
-                    throw new Error("Veuillez choisir parmi les 4 choix."); 
-          }
-
-          // Affiche le résultat
-          alert("Voici le resultat : " + resultat);
-          
-     } catch (error) {
-          alert(error.message); // Si une erreur est survenue, on affiche l'erreur
-     }
-
-     restart = confirm("Souhaitez-vous faire un autre calcul ?");
-     // On demande grâce à la boîte de dialogue confirm() si l'utilisateur veut recommencer
-
-} while (restart);
-
+// Ce qu'il faut savoir ici est que le varible "var" est à chaque fois réécrit.
