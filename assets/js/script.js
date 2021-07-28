@@ -1,7 +1,9 @@
 
 let monTableau = ['un', 'deux', 'trois', 'quatre']; 
-monTableau.push('cinq');
-monTableau.unshift('zero')
+// monTableau.push('cinq'); 
+// monTableau.unshift('zero') 
+// monTableau.pop(monTableau) 
+// monTableau.shift(monTableau);
 // console.log(monTableau);
 
 let monTableau2D = [
@@ -10,6 +12,7 @@ let monTableau2D = [
 ];
 
 // monTableau2D[1].unshift('test');
+// monTableau2D[0].shift();
 // console.log(monTableau2D);
 
 let monTableauAssociatif = { 
@@ -18,5 +21,6 @@ let monTableauAssociatif = {
      'poste'   : 'PDG de Facebook'
 };
 
-monTableauAssociatif['nationalité'] = 'Américaine';
+// monTableauAssociatif['nationalité'] = 'Américaine';
+delete(monTableauAssociatif.poste);
 console.log(monTableauAssociatif);
