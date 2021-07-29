@@ -1,11 +1,25 @@
-let listeDePays = ['France', 'Belgique', 'Japon', 'Maroc'];
+let monTableauAssociatif = {
+     'prenom'  : 'Marc',
+     'nom'     : 'Zeckerberg',
+     'poste'   : 'PDG de Facebook'
+};
 
-// for(const pays of listeDePays){
-//      console.log(pays);
-// }
+let monTableauAssociatif2 = {
+     'prenom'  : 'Bill',
+     'nom'     : 'Gates',
+     'poste'   : 'PDG de Microsoft'
+};
 
-// listeDePays.forEach(function(pays) {
-//      console.log(pays);
-// })
 
-listeDePays.forEach(pays => console.log(pays)); // la version en une ligne de Foreach.
+function concatener(tableau) {  
+
+     let chaine = '';
+     for (const valeur in tableau) { 
+          chaine += (valeur + ' : ' + tableau[valeur] + '\n');
+     }
+     console.log(chaine);
+
+}
+
+concatener(monTableauAssociatif);
+concatener(monTableauAssociatif2);
