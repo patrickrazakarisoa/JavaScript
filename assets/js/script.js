@@ -1,14 +1,11 @@
-let panier = ['fraise', 'banane', 'poire'];
+let listeDePays = ['France', 'Belgique', 'Japon', 'Maroc'];
 
-for (const fruit in panier) {
-     console.log(panier[fruit]);
-     // panier[fruit] = 'pomme';     
-}
+// for(const pays of listeDePays){
+//      console.log(pays);
+// }
 
-for (const fruit of panier) { // le plus utilisé en Javascript !!
-     console.log(panier.indexOf(fruit));
-     // panier[fruit] = 'pomme';     
-}
+// listeDePays.forEach(function(pays) {
+//      console.log(pays);
+// })
 
-// console.log(panier);
-
+listeDePays.forEach(pays => console.log(pays)); // la version en une ligne de Foreach.
