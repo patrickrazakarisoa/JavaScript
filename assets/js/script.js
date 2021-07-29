@@ -1,25 +1,11 @@
-let monTableauAssociatif = {
-     'prenom'  : 'Marc',
-     'nom'     : 'Zeckerberg',
-     'poste'   : 'PDG de Facebook'
-};
+// let maFonction = function(){
+//      console.log('test');
+// }
 
-let monTableauAssociatif2 = {
-     'prenom'  : 'Bill',
-     'nom'     : 'Gates',
-     'poste'   : 'PDG de Microsoft'
-};
+// let maFonction = (parametre) => {
+//      console.log('test');
+// }
 
+let maFonction = () => console.log('test');
 
-function concatener(tableau) {  
-
-     let chaine = '';
-     for (const valeur in tableau) { 
-          chaine += (valeur + ' : ' + tableau[valeur] + '\n');
-     }
-     console.log(chaine);
-
-}
-
-concatener(monTableauAssociatif);
-concatener(monTableauAssociatif2);
+maFonction();
