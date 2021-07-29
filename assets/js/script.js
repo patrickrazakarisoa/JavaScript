@@ -1,19 +1,14 @@
+let panier = ['fraise', 'banane', 'poire'];
 
-let monTableau = ['un', 'deux', 'trois', 'quatre']; 
-monTableau.splice(2, 0, 'random', 'pie');
-// console.log(monTableau);
+for (const fruit in panier) {
+     console.log(panier[fruit]);
+     // panier[fruit] = 'pomme';     
+}
 
-let monTableau2D = [
-     ['Mark', 'Jeff', 'Bill'],
-     ['Zuckerberg', 'Bezos', 'Gates']
-];
-monTableau2D.splice(2, 0, ['40', '60', '70']);
-// monTableau2D[0].splice(0, 1)
-console.log(monTableau2D);
+for (const fruit of panier) { // le plus utilisé en Javascript !!
+     console.log(panier.indexOf(fruit));
+     // panier[fruit] = 'pomme';     
+}
 
-let monTableauAssociatif = { 
-     'prenom'  : 'Mark',
-     'nom'     : 'Zuckerberg',
-     'poste'   : 'PDG de Facebook'
-};
-// console.log(monTableauAssociatif);
+// console.log(panier);
+
