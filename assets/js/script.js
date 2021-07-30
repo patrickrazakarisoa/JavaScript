@@ -1,30 +1,26 @@
-// Les closures permettent de garder en mémoire les variables de fonction parente.
+let chien = {
+     race      : 'Shiba',
+     poil      : 'Court',
+     // aboyer    :  function(){
+     //      console.log('Wouaf Wouaf');
+     // }
 
-function bonjour(prenom){
-     let resultat = "Bonjour " + prenom; // variable locale
-     let maClosure = () => console.log(resultat);
-     return maClosure;
+     aboyer    :  () => console.log('Wouaf Wouaf')
 }
 
-let maFonction = bonjour('Evan');
-maFonction();
+chien.aboyer();
 
-function timer() {
-     let secondes = 0;
+// let magicien = {
+//      attaquer    :  function(){
+//           console.log('Le magicien lance un sort');
+//      }
+// }
 
-     let maClosure = () => {
-          return ++secondes;
-     }
-     return maClosure;
-}
+// let guerrier = {
+//      attaquer    :  function(){
+//           console.log('Le guerrier prend son épée');
+//      }
+// }
 
-let monTimer = timer();
-console.log(monTimer());
-console.log(monTimer());
-
-let monDeuxiemeTimer = timer();
-console.log(monDeuxiemeTimer());
-
-console.log(monTimer());
-
-
+// magicien.attaquer();
+// guerrier.attaquer();
