@@ -1,24 +1,23 @@
-// function addition(nombreA, nombreB){ // function d'addiction classique
-//      let resultat = nombreA + nombreB;
-//      console.log(resultat);
-// }
+// Exemple 1 : fusionner plusieurs tableaux
+let fruits = ['fraise', 'banane', 'poire'];
+let aliments = ['chocolat', 'sucre', 'lait', ...fruits];
+// let total = aliments.concat(fruits);
+// console.log(aliments);
 
-// addition(5, 6);
+// Exemple 2 ; décuouper une chaine de caractères en plusierus éléments
+let phrase = "Bonjour !";
+let phraseTableau = [...phrase];
+// console.log(phraseTableau);
 
+// Exemple 2 :  sélectionner un élément , et stocker les autres dans une variable
+let devises = ['dollars', 'euro', 'yen'];
 
-function addition(...nombres){ // function avec REST parameter
+// sans décomposition
+// let premierDevise = devises[0];
+// let autres = [devises[1], devises[2]];
 
-     let resultat = 0;
-     nombres.forEach(nombre => {
-          resultat += nombre;
-     })
-     console.log(resultat);
+// avec décomposition
+let [ premierDevise, ...autres] = devises;
 
-     // return nombres.reduce((previous, current) => {
-     //      return previous + current;
-     // });         
-}
-
-addition(4, 5, 5, 5, 95, 54, 84, 100);
-// console.log(addition(4, 5, 5, 5, 95, 54, 84, 100));
-
+console.log(premierDevise);
+console.log(autres);
