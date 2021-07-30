@@ -1,26 +1,16 @@
-let chien = {
-     race      : 'Shiba',
-     poil      : 'Court',
-     // aboyer    :  function(){
-     //      console.log('Wouaf Wouaf');
-     // }
+let informations = ['superSayen', '25', 'homme'];
 
-     aboyer    :  () => console.log('Wouaf Wouaf')
-}
 
-chien.aboyer();
+// Sans décomposition
+// let pseudo     = informations[0];
+// let age        = informations[1];
+// let sexe       = informations[2];
 
-// let magicien = {
-//      attaquer    :  function(){
-//           console.log('Le magicien lance un sort');
-//      }
-// }
+// Avec décomposition
+let [pseudo, age, sexe] = informations;
 
-// let guerrier = {
-//      attaquer    :  function(){
-//           console.log('Le guerrier prend son épée');
-//      }
-// }
+console.log(pseudo);
+console.log(age);
+console.log(sexe);
 
-// magicien.attaquer();
-// guerrier.attaquer();
+
