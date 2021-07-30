@@ -1,16 +1,10 @@
-let informations = ['superSayen', '25', 'homme'];
+let nombres = [10, 45, 75, 10, 24, 45];
+// let monSet = new Set(nombres);
+let monSet = new Set();
 
+monSet.add('70');
+monSet.add(87);
+// monSet.delete(87);
+// monSet.add(['mon', 'tableau', 'test']);
 
-// Sans décomposition
-// let pseudo     = informations[0];
-// let age        = informations[1];
-// let sexe       = informations[2];
-
-// Avec décomposition
-let [pseudo, age, sexe] = informations;
-
-console.log(pseudo);
-console.log(age);
-console.log(sexe);
-
-
+console.log(monSet.size);
