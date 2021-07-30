@@ -1,10 +1,13 @@
-let nombres = [10, 45, 75, 10, 24, 45];
-// let monSet = new Set(nombres);
-let monSet = new Set();
+let utilisateurs = new Map();
 
-monSet.add('70');
-monSet.add(87);
-// monSet.delete(87);
-// monSet.add(['mon', 'tableau', 'test']);
+utilisateurs.set('Marc Zuckerberg', {
+     email: 'mark@facebook.com',
+     poste: 'PDG'
+});
 
-console.log(monSet.size);
+utilisateurs.set('Bill Gates', {
+     email: 'gate@note.com',
+     poste: 'Sauver le monde'
+});
+
+console.log(utilisateurs);
