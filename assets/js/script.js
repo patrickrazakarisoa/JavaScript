@@ -1,21 +1,15 @@
-// L'objet WeakSet permet de faire une collection d'objet. Dans le cas ci-dessous, on associel dans les objets à un voiture (WeakSet)
+let voitures = new WeakMap();
+
+let index = {
+     id: 1
+}
 
 let voitureA = {
-     constructeur   : 'Tesla',
-     modele         : 'Cybertruck'
+     contructeur: 'Tesla',
+     modele: 'Cybertruck'
 }
 
-let voitureB = {
-     constructeur   : 'Toyota',
-     modele         : 'Supra'
-}
+voitures.set(index, voitureA);
 
-// voiture.add(voitureA);
-// voiture.add(voitureB);
-
-// Au lieu de rajouter add à chaque fois, on peut faire la méthode suivante.
-let voiture = new WeakSet([voitureA, voitureB]);
-
-voiture.delete(voitureA);
-
-console.log(voiture);
+voitures.delete(index);
+console.log(voitures);
