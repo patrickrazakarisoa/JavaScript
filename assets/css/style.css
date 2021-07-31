@@ -1,13 +1,18 @@
-body{
-     margin: 0;
+html, body {
      padding: 0;
-     box-sizing: border-box;
-     background-color: black;
-     color: white;
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     font-size: larger;
+     margin: 0;
+     font-family: arial;
+     background-color: #ececeb;
 }
 
-.mydiv {
-     padding: 5%;
+header {
+     background-color: #c9d1d3;
+     text-align: center;
+     padding: 15px;
+     color: white;
+}
+
+.container {
+     width: 800px;
+     margin: 0 auto;
 }
