@@ -1,29 +1,11 @@
-let a = document.querySelector('a');
-let button = document.querySelector('button');
+let article    = document.querySelector('article');
+let h1         = document.querySelector('h1');
 
-a.addEventListener('click', (event) => {
-     if(confirm('Etes-vous sûr?')) {
-          location.href = "https://google.com";
-     }
-     // console.log(event);
-});
+article.addEventListener('click', () => {
+     alert('article cliqué');
+})
 
-// button.addEventListener('mouseout',  () => { document.body.style.backgroundColor="orange"});
-
-
-
-
-button.addEventListener('mouseover',  () => { document.body.style.backgroundColor="orange"});
-
-function backgroundWhite() {
-     document.body.style.backgroundColor="white";
-}
-
-button.addEventListener('mouseout', backgroundWhite );
-button.addEventListener('mouseout',  () => { document.body.style.fontFamily="arial"});
-
-button.removeEventListener('mouseout', backgroundWhite );
-
-
-
-
+h1.addEventListener('click', (e) => {
+     alert('titre cliqué');
+     e.stopPropagation();
+})
