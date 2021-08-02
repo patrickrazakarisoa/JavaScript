@@ -1,11 +1,10 @@
+// 1ère méthode : décomposée
+let header = document.querySelector('header');
+header.style.backgroundColor = "#ffbd69";
 
-// la méthode longue
-// let h1 = document.querySelector('h1');
-// h1.remove();
+// 2ème méthode : directe
+document.querySelector('h1').style.color = "#111d5e";
+document.querySelector('h1').style.textAlign = "center";
 
-// la méthode courte
-// document.querySelector('h1').remove;
-
-let div = document.createElement('div');
-div.innerHTML = "<div style='font-weight: normal; font-size: 50px; color: steelblue; text-align: center; padding: 20px;'>Text du div</div>";
-document.body.append(div);
+// 3ème méthode : avec une classe 
+document.querySelector('header').className = "ma_class";
