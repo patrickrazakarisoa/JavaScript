@@ -1,21 +1,11 @@
-// 1ère méthode : Ecrit juste une texte
-// document.write('test');
 
-// 2ème méthode : Ajouter une élément brut
+// la méthode longue
 // let h1 = document.querySelector('h1');
-// h1.append(' test')
+// h1.remove();
 
-// 3ème méthode : ( celle pour les objets)
-// Créer une élément
-let helloWorld = document.createElement('div');
+// la méthode courte
+// document.querySelector('h1').remove;
 
-// Le personnaliser
-helloWorld.innerHTML = "<div style='font-weight: normal; font-size: 50px; color: steelblue; text-align: center; padding: 20px;'>Hello World !</div>";
-
-// L'ajouter à notre page
-// document.body.append(helloWorld);
-// document.body.appendChild(helloWorld);
-
-// document.body.insertBefore(helloWorld, document.querySelector('.container'));
-
-// document.querySelector('.container').prepend(helloWorld);
+let div = document.createElement('div');
+div.innerHTML = "<div style='font-weight: normal; font-size: 50px; color: steelblue; text-align: center; padding: 20px;'>Text du div</div>";
+document.body.append(div);
