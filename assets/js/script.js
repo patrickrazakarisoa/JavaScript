@@ -1,10 +1,28 @@
-// 1ère méthode : décomposée
-let header = document.querySelector('header');
-header.style.backgroundColor = "#ffbd69";
+// id supprimer
+document.querySelector("#a-supprimer").remove();
 
-// 2ème méthode : directe
-document.querySelector('h1').style.color = "#111d5e";
-document.querySelector('h1').style.textAlign = "center";
+// création header
+let header     = document.createElement('header');
+let menu       = document.createElement('div');
+let paragraphe = document.createElement('p');
 
-// 3ème méthode : avec une classe 
-document.querySelector('header').className = "ma_class";
+// Les personnaliser
+header.textContent            = "Bienvenue";
+header.style.backgroundColor  = "#e3b04b";
+header.style.textAlign        = "center"; 
+header.style.padding          = "20px";
+header.style.fontSize         = "3em";
+header.style.fontFamily       = "arial";
+header.style.color            = "white";
+
+menu.innerHTML                = "<a style='text-decoration: none; padding: 15px' href='#'>Acceuil</a>  <a style='text-decoration: none;padding: 15px' href='#'>Une autre page</a>";
+menu.style.backgroundColor    = "#f1d6ab";
+menu.style.padding            = "15px";
+
+paragraphe.textContent        = "Ceci est un paragraphe créé avec JavaScript";
+paragraphe.style.margin       = "30px";
+
+// Les ajouter
+document.body.append(header, menu, paragraphe);
+
+
