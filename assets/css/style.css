@@ -3,3 +3,9 @@
      margin: 0;
      box-sizing: border-box;
 }
+
+button {
+     margin: auto;
+     margin-top: 5%;
+     padding: 10px;
+}
