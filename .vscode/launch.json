@@ -1,6 +1,11 @@
 {
+     // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
+     // Pointez pour afficher la description des attributs existants.
+     // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
      "version": "0.2.0",
      "configurations": [
+          
+
           {
                "type": "pwa-node",
                "request": "launch",
@@ -9,12 +14,6 @@
                     "<node_internals>/**"
                ],
                "program": "${workspaceFolder}\\assets\\js\\script.js"
-          },
-          {
-               "type": "node-terminal",
-               "name": "JavaScript Debug Terminal",
-               "request": "launch",
-               "cwd": "${workspaceFolder}"
           }
      ]
 }
