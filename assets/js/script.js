@@ -1,23 +1,28 @@
-function Utilisateur(prenom, nom, email) {
-     this.prenom = prenom;
-     this.nom    = nom;
-     this.email  = email;
+//Animal(nombreDePattes, poids)
+function Animal(nombreDePattes, poids) {
+     this.nombreDePattes = nombreDePattes;
+     this.poids          = poids;
 }
 
-Utilisateur.prototype.sePresenter = function() {
-     console.log("Bonjour, je m'appelle " + this.prenom + " " + this.nom + " et vous pouvez me contacter à l'adresse email " + this.email);
+Animal.prototype.presantation = function() {
+     console.log("Cet animal possède " + this.nombreDePattes + " pattes et fait " + this.poids + ".")
 }
 
-// On crée un objet
-var mark = new Utilisateur("Mark", "Zeckerberg", "mark@facebook.com");
-var bill = new Utilisateur("Bill", "Gates", "bill@gatesnotes.com");
+// Oiseau(nombreDePattes, poids / longueurDesAiles)
+function Oiseau(nombreDePattes, poids, longueurDesAiles) {
+     Animal.call(this, nombreDePattes, poids)
+     // La fonction call() permet d'appeler une fonction constructeur: en premier paramètre (this) on donne l'objet acteur , ensuite, on donne les arguments de son constructeur.
+     this.longueurDesAiles = longueurDesAiles;
+}
+Oiseau.prototype = Object.create(Animal.prototype);
+Oiseau.prototype.constructor = Oiseau;
 
-console.log(mark); // On voit que JavaScript ajoute une propriété __proto__ et constructor
+// Mammifère(nombreDePattes, poids / typeDePoils)
+function Mammifère(nombreDePattes, poids, typeDePoils) {
+     Animal.call(this, nombreDePattes, poids)
+     this.typeDePoils = typeDePoils;
+}
 
-// Créer un ohjet avec Object()
-var monObjet = new Object();
-monObjet.titre = "Le titre de l'objet";
-
-mark.sePresenter();
-
-
+var perroquet = new Oiseau(2, "2kg", "grandes");
+console.log(perroquet);
+// perroquet.presantation();
