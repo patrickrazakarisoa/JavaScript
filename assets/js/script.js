@@ -1,28 +1,31 @@
-//Animal(nombreDePattes, poids)
-function Animal(nombreDePattes, poids) {
-     this.nombreDePattes = nombreDePattes;
-     this.poids          = poids;
+// Call permet d'invoquer immédiatement une fonction
+// Call 
+// Animal.call(this, nombreDePattes, poids);
+
+let gandalf = { titre: "Magicien"}
+
+function direBonjour(arme, degats) {
+     console.log("Bonjour " + this.titre  + ", vous possédez " + arme + " qui donne " + degats + " points de dégats.");
+}
+// direBonjour.apply(gandalf, ["une baton", 75]); // Apply a besion d'un tableau pour passer des arguments ( utile pour les gros données .JSON)
+// direBonjour.call(gandalf, "une baton", 75); // Call donner les arguments un à un.
+
+// Bind
+// Objectif: changer le context de "this".
+
+this.valeur = "Windows"
+
+let monObjet = {
+     valeur: "Objet",
+     getValeur: function() {
+          console.log(this.valeur);
+     }
 }
 
-Animal.prototype.presantation = function() {
-     console.log("Cet animal possède " + this.nombreDePattes + " pattes et fait " + this.poids + ".")
-}
+monObjet.getValeur();
 
-// Oiseau(nombreDePattes, poids / longueurDesAiles)
-function Oiseau(nombreDePattes, poids, longueurDesAiles) {
-     Animal.call(this, nombreDePattes, poids)
-     // La fonction call() permet d'appeler une fonction constructeur: en premier paramètre (this) on donne l'objet acteur , ensuite, on donne les arguments de son constructeur.
-     this.longueurDesAiles = longueurDesAiles;
-}
-Oiseau.prototype = Object.create(Animal.prototype);
-Oiseau.prototype.constructor = Oiseau;
+let maValeur = monObjet.getValeur;
+maValeur();
 
-// Mammifère(nombreDePattes, poids / typeDePoils)
-function Mammifère(nombreDePattes, poids, typeDePoils) {
-     Animal.call(this, nombreDePattes, poids)
-     this.typeDePoils = typeDePoils;
-}
-
-var perroquet = new Oiseau(2, "2kg", "grandes");
-console.log(perroquet);
-// perroquet.presantation();
+let maValeurAvecBind = monObjet.getValeur.bind(monObjet); // On change le context de Glogale en Locale
+maValeurAvecBind();
