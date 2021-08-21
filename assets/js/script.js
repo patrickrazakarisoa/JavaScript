@@ -1,31 +1,42 @@
-// Call permet d'invoquer immédiatement une fonction
-// Call 
-// Animal.call(this, nombreDePattes, poids);
+class Utilisateur {
+     constructor(prenom, nom, email) {
+          this.prenom = prenom;
+          this.nom    = nom;
+          this.email  = email;
+     }
 
-let gandalf = { titre: "Magicien"}
-
-function direBonjour(arme, degats) {
-     console.log("Bonjour " + this.titre  + ", vous possédez " + arme + " qui donne " + degats + " points de dégats.");
-}
-// direBonjour.apply(gandalf, ["une baton", 75]); // Apply a besion d'un tableau pour passer des arguments ( utile pour les gros données .JSON)
-// direBonjour.call(gandalf, "une baton", 75); // Call donner les arguments un à un.
-
-// Bind
-// Objectif: changer le context de "this".
-
-this.valeur = "Windows"
-
-let monObjet = {
-     valeur: "Objet",
-     getValeur: function() {
-          console.log(this.valeur);
+     sePresenter() {
+          console.log("Je m'appelle " + this.prenom + " " + this.nom + " et vous pouvez me contacter à l'adresse email: " + this.email + ".");
      }
 }
 
-monObjet.getValeur();
+var mark = new Utilisateur('Mark', 'Juckerberg', 'mark@facebook.com');
+mark.sePresenter();
 
-let maValeur = monObjet.getValeur;
-maValeur();
+class Animal {
+     constructor(nombreDePattes, poids) {
+          this.nombreDePattes = nombreDePattes;
+          this.poids          = poids;
+     }
 
-let maValeurAvecBind = monObjet.getValeur.bind(monObjet); // On change le context de Glogale en Locale
-maValeurAvecBind();
+     presentation() {
+          console.log("Cet animal possède " + this.nombreDePattes + " pattes et fait " + this.poids + " kg.");
+     }
+}
+
+// Oiseau.prototype = Object.create(Animal.prototype); // cette methide est la même qu'extends (l'heritage des classes) 
+class Oiseau extends Animal {
+     constructor(nombreDePattes, poids, longueurDesAiles) {
+          super(nombreDePattes, poids);
+          this.longueurDesAiles = longueurDesAiles;
+     }
+
+     voler() {
+          console.log("L'oiseau vole !");
+     }
+}
+
+var perroquet = new Oiseau(2, 1, "grandes");
+console.log(perroquet);
+perroquet.presentation();
+perroquet.voler();
