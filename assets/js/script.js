@@ -1,72 +1,76 @@
-class Utilisateur {
-     constructor(prenom, nom, email) {
-          this.prenom = prenom;
-          this.nom    = nom;
-          this.email  = email;
+class Personnage {
+     constructor(pseudo, classe, sante, attaque) {
+          this.pseudo  = pseudo;
+          this.classe  = classe;
+          this.sante   = sante;
+          this.attaque = attaque;
+          this.niveau  = 1;
      }
 
-     // Un getter (accesseur) permet de récupérer une propriété.
-     get nomComplet() {
-          return this.prenom + ' ' + this.nom;
+     get informations() {
+          return this.pseudo + "(" + this.classe + ") a " + this.sante + " points de vie et est au niveau " + this.niveau + ".";
      }
 
-     // Un setter (mutateur) permet de définir une propriété
-     set nomComplet(valeur) {
-          [this.prenom, this.nom] = valeur.split(' ') // split divise une chaine de caractère à partir d'une séparateur pour faire un tableau;
+     evoluer() {
+          this.niveau++;
+          console.log(this.pseudo + " passe au niveau " + this.niveau + " !");
      }
 
-     sePresenter() {
-          console.log("Je m'appelle " + this.prenom + " " + this.nom + " et vous pouvez me contacter à l'adresse email: " + this.email + ".");
+     verfierSante() {
+          if(this.sante <= 0) {
+               this.sante == 0;
+               console.log(this.pseudo + " a perdu !")
+          } 
+     }
+    
+}
+
+class Magicien extends Personnage {
+     constructor(pseudo) {
+          super(pseudo, "magicien", 170, 90);
+     }
+
+     attaquer(personnage) {
+          personnage.sante -= this.attaque;
+          console.log(this.pseudo + " attaque " + personnage.pseudo + " en lançant une sort (" + this.attaque + " dégâts).");
+          this.evoluer();
+          personnage.verfierSante();    
+     }
+
+     coupSpecial(personnage) {
+          personnage.sante -= this.attaque * 5;
+          console.log( this.pseudo + " attaque avec une coup spécial puissance des arcanes " + personnage.pseudo + " (" + (this.attaque * 5) + " dégâts)");
+          this.evoluer();
+          personnage.verfierSante();
+     }
+}
+class Guerrier extends Personnage {
+     constructor(pseudo) {
+          super(pseudo, "Guerrier", 350, 50);
+     }
+
+     attaquer(personnage) {
+          console.log(this.pseudo + " attaque " + personnage.pseudo + " avec son épée (" + this.attaque + " dégâts).");
+          personnage.sante -= this.attaque;
+          this.evoluer();
+          personnage.verfierSante();       
+     }
+
+     coupSpecial(personnage) {
+          console.log( this.pseudo + " attaque avec une coup spécial haches de guerre " + personnage.pseudo + " (" + (this.attaque * 5) + " dégâts)");
+          personnage.sante -= this.attaque * 5;
+          this.evoluer();
+          personnage.verfierSante();
      }
 }
 
-var mark = new Utilisateur('Mark', 'Juckerberg', 'mark@facebook.com');
-console.log(mark.nomComplet);
-mark.nomComplet = "Bill Gates";
-console.log(mark.nomComplet);
+var thor    = new Guerrier('Thor');
+var gandalf = new Magicien('Gandalf');
+console.log(thor.informations);
+console.log(gandalf.informations);
+gandalf.attaquer(thor);
+console.log(thor.informations);
+thor.attaquer(gandalf);
+console.log(gandalf.informations);
+gandalf.coupSpecial(thor);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class Animal {
-//      constructor(nombreDePattes, poids) {
-//           this.nombreDePattes = nombreDePattes;
-//           this.poids          = poids;
-//      }
-
-//      presentation() {
-//           console.log("Cet animal possède " + this.nombreDePattes + " pattes et fait " + this.poids + " kg.");
-//      }
-// }
-
-// // Oiseau.prototype = Object.create(Animal.prototype); // cette methide est la même qu'extends (l'heritage des classes) 
-// class Oiseau extends Animal {
-//      constructor(nombreDePattes, poids, longueurDesAiles) {
-//           super(nombreDePattes, poids);
-//           this.longueurDesAiles = longueurDesAiles;
-//      }
-
-//      voler() {
-//           console.log("L'oiseau vole !");
-//      }
-// }
-
-// var perroquet = new Oiseau(2, 1, "grandes");
-// console.log(perroquet);
-// perroquet.presentation();
-// perroquet.voler();
