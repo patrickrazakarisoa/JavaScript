@@ -1,11 +1,20 @@
-let dateActuelle = new Date(); // Date(year: number, month: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
+let dateActuelle = new Date(); // mode anglais par défaut
 
-console.log(dateActuelle.getFullYear());
-console.log(dateActuelle.getDay()); // jour de la semaine (commence à partir de dimanche à l'index 0)
-console.log(dateActuelle.getDate()); // jour d'aujourd'hui
+// toLocaleDateString = jour, mois, l'année
+// toLocaleTimeString = l'heure
+// toLocaleString     = jour, mois, l'année, l'heure
+// ON CHOISI LES OPTIONS QU'ON VEUT
 
-console.log(dateActuelle.getUTCDay());
+// console.log(navigator.language);
 
+let dateLocate = dateActuelle.toLocaleString(navigator.language, {
+     weekday: 'long', // short ( 3 première lettres), narrow (première lettre), long (toutes les lettres)
+     year: 'numeric', // numeric (xxxx), 2-digit (xx)
+     month: 'long',   // short ( 3 première lettres), narrow (première lettre), long (toutes les lettres), numeric (xx)
+     day: 'numeric',  // numeric, 2-digit
+     // hour: 'numeric', //...
+     // minute: 'numeric',
+     // second: 'numeric'
+});
 
-dateActuelle.setFullYear(2750)
-console.log(dateActuelle.getFullYear());
+console.log(dateLocate);
