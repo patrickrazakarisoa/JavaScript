@@ -1,6 +1,6 @@
 let datePrecise = new Date(2780, 11, 10, 9, 39);
 console.log(datePrecise);
-// // Au-dessus :
+// // Au-dessus:
 // - annee (obligatoire)
 // - mois (obligatoire) qui commence par 0
 
