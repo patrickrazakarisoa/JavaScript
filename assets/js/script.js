@@ -1,11 +1,11 @@
-let datePrecise = new Date(2780, 11, 10, 9, 39);
-console.log(datePrecise);
-// // Au-dessus:
-// - annee (obligatoire)
-// - mois (obligatoire) qui commence par 0
+let dateActuelle = new Date(); // Date(year: number, month: number, date?: number, hours?: number, minutes?: number, seconds?: number, ms?: number)
 
-// - jour (facultatif) qui commence par 1
-// - heure (facultatif) qui commence par 0
-// - minute (facultatif) qui commence par 0
-// - secondes (facultatif) qui commence par 0
-// - millisecondes (facultatif) qui commence par 0
+console.log(dateActuelle.getFullYear());
+console.log(dateActuelle.getDay()); // jour de la semaine (commence à partir de dimanche à l'index 0)
+console.log(dateActuelle.getDate()); // jour d'aujourd'hui
+
+console.log(dateActuelle.getUTCDay());
+
+
+dateActuelle.setFullYear(2750)
+console.log(dateActuelle.getFullYear());
