@@ -1,20 +1,19 @@
-let dateActuelle = new Date(); // mode anglais par défaut
+// Avant
+// let prenom = "John";
+// let bonjour= "Bonjour " + prenom;
+// console.log(bonjour);
 
-// toLocaleDateString = jour, mois, l'année
-// toLocaleTimeString = l'heure
-// toLocaleString     = jour, mois, l'année, l'heure
-// ON CHOISI LES OPTIONS QU'ON VEUT
+// Maintenant
+// let prenom = "John";
+// let bonjour= `Bonjour ${prenom}`;
+// console.log(bonjour);
 
-// console.log(navigator.language);
+// Avec les dates
+// let date = new Date().getFullYear();
+// let copyright = `${date} © Portfolio`;
+// console.log(copyright);
 
-let dateLocate = dateActuelle.toLocaleString(navigator.language, {
-     weekday: 'long', // short ( 3 première lettres), narrow (première lettre), long (toutes les lettres)
-     year: 'numeric', // numeric (xxxx), 2-digit (xx)
-     month: 'long',   // short ( 3 première lettres), narrow (première lettre), long (toutes les lettres), numeric (xx)
-     day: 'numeric',  // numeric, 2-digit
-     // hour: 'numeric', //...
-     // minute: 'numeric',
-     // second: 'numeric'
-});
-
-console.log(dateLocate);
+// Ou encore plus pratique : des calculs
+let aliments = {fruits: 5, legumes: 1, biscuits: 75}  // objet literal
+let panier   = `Dans votre panier, vous avez ${aliments.fruits + aliments.legumes + aliments.biscuits} articles.`; // Ceca une template string
+console.log(panier); 
