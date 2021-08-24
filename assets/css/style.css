@@ -3,36 +3,3 @@
      padding: 0;
      box-sizing: border-box;
 }
-
-.message{
-     margin-top: 50px;
-     text-align: center;
-}
-
-.message::before{
-     content: '!';
-     margin: 2px;
-     color: white;  
-     font-size: larger; 
-     background-color: black;
-}
-
-.message::after{
-     content: '!';
-     margin: 2px;
-     color: white;
-     font-size: larger; 
-     background-color: black;
-}
-
-#demo {
-     height: 50px;
-     width: 10%;
-     margin: auto;
-     padding: 10px;
-     background: black;
-     color: white;
-     text-align: center;
-     font-size: larger;
-     border-radius: 5px;
-}

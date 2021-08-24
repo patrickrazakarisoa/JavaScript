@@ -1,8 +1,25 @@
+const url = "https://lesoublisdelinfo.com/api.php";
 
-let actualTime = setInterval(myTimer, 1000);
+let requete = new XMLHttpRequest();
 
-function myTimer() {
-     let d = new Date();
-     let t = d.toLocaleTimeString();
-     document.getElementById("demo").innerHTML = t;
+// Get
+// requete.open('GET', url);
+// requete.responseType = 'json';
+// requete.send();
+
+// Post
+requete.open('POST', url);
+requete.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+requete.responseType = 'json';
+requete.send('prenom=John');
+
+requete.onload = function() {
+     if(requete.readyState === XMLHttpRequest.DONE) {
+          if(requete.status === 200) {
+               let response = requete.response;
+               console.log(response);
+          } else {
+               alert("Un problème est intervenu, merci de revenir plus tard.");
+          }
+     }
 }
