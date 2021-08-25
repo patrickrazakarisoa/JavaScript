@@ -1,34 +1,22 @@
-let apiKey= "a1b6d52affffed92b9c84ab6636fceec";
-let ville = "Paris";
-recevoirTemperature(ville);
+// Attention, code puissant
 
-let changerDeVille = document.querySelector('#changer');
-changerDeVille.addEventListener('click', () => {
-     ville =  prompt("Entrer le nom de la ville.");
-     recevoirTemperature(ville);
-})
+// Mode synchrone
+let i = 0;
+
+console.log('Fonction commencée');
+
+// while(i < 9999999999) {
+//   i++;
+// }
+
+console.log('Fonction terminée');
 
 
-function recevoirTemperature(ville) { 
-     const url= "https://api.openweathermap.org/data/2.5/weather?q=" + ville + "&appid=" + apiKey + "&units=metric";
+// Mode asynchrone 
 
-     let requete = new XMLHttpRequest();
-     requete.open('GET', url);
-     requete.responseType = 'json';
-     requete.send();
+// function direBonjour(){
+//   console.log('bonjour');
+// }
 
-     requete.onload = function() {
-          if(requete.readyState === XMLHttpRequest.DONE) {
-               if(requete.status === 200) {
-                    let response = requete.response;
-                    let responseTemp  = response.main.temp;
-                    let responseVille = response.name;
-
-                    document.querySelector('#ville').textContent = responseVille;
-                    document.querySelector('#temperature_label').textContent = responseTemp;
-               } else {
-                    alert("Un problème est intervenu, merci de revenir plus tard.");
-               }
-          }
-     }
-}
+// setTimeout(direBonjour, 3000);
+// console.log('test');
