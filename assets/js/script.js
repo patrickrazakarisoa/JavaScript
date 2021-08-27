@@ -1,26 +1,30 @@
-// NAMP / WAMP / LAMP / XAMP => les cookies marche seulement avec un serveur ou un serveur local.
+// LocalStorage   = Stocké dans le navigateur même après qu'il soit fermé.
+// SessionStorage = Sacké dans le navigateur pendant la session.
 
-// Créer un cookie
-document.cookie = "prenom=John";
+// Et les cookies ?
 
-// Afficher tous les cookies
-// alert(document.cookie);
+// setItem([clé], [valeur]) / getItem[clé] / removeItem[clé]
+// clear() : supprimer tout
+// key([index]) : obtenir la clef située à l'index donnée
+// length : obtenir le nombre d'éléments stockés
 
-// Modifier un cookie
-document.cookie = "prenom=Mark";
 
-// Supprimer un cookie
-document.cookie = "prenom=";
+function elementDiv() {
+     let element = document.createElement('div');
+     element.style.textAlign = "center";
+     element.style.marginTop = "15%";
+     element.style.fontSize  = "35px";
+     element.style.fontWeight= "500";
+     element.textContent     = 'Bonjour ' + localStorage.getItem('prenom');
+     document.body.append(element);
+}
 
-// Options
+if(localStorage.getItem('prenom')){  
+     elementDiv();
+} else {
+     let prenom = prompt("Quel est votre prenom?");
+     localStorage.setItem('prenom', prenom);  
+     elementDiv();  
+}
 
-document.cookie = "prenom=John; path=/admin";
-document.cookie = "prenom=John; path=/admin; domain=beleivemy.com";
-
-let date = new Date(Date.now() + 31536000000);
-date = date.toUTCString();
-document.cookie = "prenom=John; path=/admin; domain=beleivemy.com; expires=" + date;
-
-document.cookie = "prenom=John; path=/admin; domain=beleivemy.com; max-age=31536000000";
-
-document.cookie = "prenom=John; path=/admin; domain=beleivemy.com; max-age=31536000000; secure";
+localStorage.clear()
