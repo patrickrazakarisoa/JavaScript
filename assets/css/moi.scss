@@ -1,0 +1,30 @@
+@import './variables'; // Comme en PHP ou en JavaScript ou autres language, on peut import un fichier du même genre!!!
+@import './header';
+
+.content {
+     @include flexCenter(column, rgba(106, 122, 135, 0.5)); // On inclure des fonctions dans du CSS !!
+     border: 5px solid;
+     p:first-child  {
+          color : red;
+          &::first-letter {
+               color: black;
+               font-size: 30px;
+               background-color: wheat;
+               padding: 0.05rem;
+               float: left;
+          }
+     }
+
+     p:nth-child(2) {
+          background: rgb(189, 175, 175);
+     }
+
+  
+}
+
+.headerExtend {
+     @extend header; // On peut faire des héritages avec le CSS, plutôt cool !!!
+     background: black;
+     width: 100% - 20%; // On peut faire des calculs comme au JavaScript
+     margin: auto;
+}

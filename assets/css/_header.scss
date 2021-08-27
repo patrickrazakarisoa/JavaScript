@@ -1,0 +1,42 @@
+@mixin flexCenter($direction, $background) {
+     height: 90vh;
+     display: flex;
+     justify-content: center;
+     align-items:center;
+     flex-direction: $direction;
+     background: $background;
+}
+
+header{
+     @include flexCenter(row, linear-gradient(to right, rgb(247, 247, 247), rgb(147, 17, 17), rgb(58, 209, 58)));
+     // height: 150px;
+     // background: linear-gradient(to right, rgb(225, 12, 48), rgb(72, 11, 204), rgb(204, 235, 204));
+     
+     .btn1 {
+          background: $primaryBtn;
+          margin: $marginBtn;
+          padding: $paddingBtn;
+          &:hover{
+               background-color: greenyellow;
+               &::after{
+                    content: ' please';
+               }             
+          }
+         
+     }
+     
+     .btn2 {
+          background: $primaryBtn;
+          margin: $marginBtn;
+          padding: $paddingBtn;
+          &:hover{
+               background-color: greenyellow;
+               &::before{
+                    content: 'I dare you to ';
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: rgb(42, 15, 15);
+               }             
+          }
+     }
+}

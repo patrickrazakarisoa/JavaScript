@@ -27,4 +27,4 @@ if(localStorage.getItem('prenom')){
      elementDiv();  
 }
 
-localStorage.clear()
+// localStorage.clear()

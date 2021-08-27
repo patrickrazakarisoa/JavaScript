@@ -1,0 +1,91 @@
+header, .headerExtend {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background: -webkit-gradient(linear, left top, right top, from(#f7f7f7), color-stop(#931111), to(#3ad13a));
+  background: linear-gradient(to right, #f7f7f7, #931111, #3ad13a);
+}
+
+header .btn1, .headerExtend .btn1 {
+  background: #47a055;
+  margin: 10px;
+  padding: 10px;
+}
+
+header .btn1:hover, .headerExtend .btn1:hover {
+  background-color: greenyellow;
+}
+
+header .btn1:hover::after, .headerExtend .btn1:hover::after {
+  content: ' please';
+}
+
+header .btn2, .headerExtend .btn2 {
+  background: #47a055;
+  margin: 10px;
+  padding: 10px;
+}
+
+header .btn2:hover, .headerExtend .btn2:hover {
+  background-color: greenyellow;
+}
+
+header .btn2:hover::before, .headerExtend .btn2:hover::before {
+  content: 'I dare you to ';
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #2a0f0f;
+}
+
+.content {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(106, 122, 135, 0.5);
+  border: 5px solid;
+}
+
+.content p:first-child {
+  color: red;
+}
+
+.content p:first-child::first-letter {
+  color: black;
+  font-size: 30px;
+  background-color: wheat;
+  padding: 0.05rem;
+  float: left;
+}
+
+.content p:nth-child(2) {
+  background: #bdafaf;
+}
+
+.headerExtend {
+  background: black;
+  width: 80%;
+  margin: auto;
+}
+/*# sourceMappingURL=moi.css.map */
