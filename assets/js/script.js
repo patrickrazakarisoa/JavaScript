@@ -1,55 +1,26 @@
-// // Les promesses
-// // En cours / Honorée / Rompue
-// // Exemple Discord(), discuter en ligne par micro (ou par video)
+// NAMP / WAMP / LAMP / XAMP => les cookies marche seulement avec un serveur ou un serveur local.
 
-// // const promesse = new Promise((resolve, reject) => {
-// //      // Tâches asynchrones
+// Créer un cookie
+document.cookie = "prenom=John";
 
-// //      // Promesse honorée : resolve()
+// Afficher tous les cookies
+// alert(document.cookie);
 
-// //      // Promesse rompue : reject()
-// // });
+// Modifier un cookie
+document.cookie = "prenom=Mark";
 
-function chargerScript(script) {
-     return new Promise((resolve, reject) => {
+// Supprimer un cookie
+document.cookie = "prenom=";
 
-          // Créer un élément
-          let element = document.createElement('script');
-          element.src = script;
-          document.body.append(element);
+// Options
 
-          // Deux possibilitées : resolve()
-          element.onload = () => resolve('Ficher ' + script + ' a été chargé.');
+document.cookie = "prenom=John; path=/admin";
+document.cookie = "prenom=John; path=/admin; domain=beleivemy.com";
 
-          // reject()
-          element.onerror = () => reject(new Error('Opération impossible pour le script ' + script));
-     })
-}
+let date = new Date(Date.now() + 31536000000);
+date = date.toUTCString();
+document.cookie = "prenom=John; path=/admin; domain=beleivemy.com; expires=" + date;
 
-async function resultat() {
-     try {
-          const scriptA = await chargerScript('assets/js/test.js');
-          console.log(scriptA);
-          const scriptB = await chargerScript('assets/js/autre.js');
-          console.log(scriptB);
-     } catch (error) {
-          console.log(error); 
-          document.body.lastChild.remove();         
-     }
-}
+document.cookie = "prenom=John; path=/admin; domain=beleivemy.com; max-age=31536000000";
 
-resultat();
-
-// Async et Await "sucres syntaxiques"
-
-// async function direBonjour() {
-//      const promesse = new Promise((resolve, reject) => {
-//           setTimeout(() => resolve('Promesse tenu !'), 3000);
-
-//      });
-
-//      let resultat = await promesse;
-//      console.log(resultat);
-// }
-
-// direBonjour();
+document.cookie = "prenom=John; path=/admin; domain=beleivemy.com; max-age=31536000000; secure";
