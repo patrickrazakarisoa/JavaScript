@@ -1,30 +1,32 @@
-// LocalStorage   = Stocké dans le navigateur même après qu'il soit fermé.
-// SessionStorage = Sacké dans le navigateur pendant la session.
+const button = document.querySelector("#mode");
+const span   = document.querySelector("span");
 
-// Et les cookies ?
+// button.addEventListener("click", () => {
+//      document.body.classList.toggle("dark");
+// })
 
-// setItem([clé], [valeur]) / getItem[clé] / removeItem[clé]
-// clear() : supprimer tout
-// key([index]) : obtenir la clef située à l'index donnée
-// length : obtenir le nombre d'éléments stockés
-
-
-function elementDiv() {
-     let element = document.createElement('div');
-     element.style.textAlign = "center";
-     element.style.marginTop = "15%";
-     element.style.fontSize  = "35px";
-     element.style.fontWeight= "500";
-     element.textContent     = 'Bonjour ' + localStorage.getItem('prenom');
-     document.body.append(element);
+if(localStorage.getItem('theme')) {
+     if(localStorage.getItem('theme') == 'sombre') {
+          modeSombre();
+     }
 }
 
-if(localStorage.getItem('prenom')){  
-     elementDiv();
-} else {
-     let prenom = prompt("Quel est votre prenom?");
-     localStorage.setItem('prenom', prenom);  
-     elementDiv();  
+function modeSombre() {
+     document.body.className = 'dark';
+     span.textContent = "Thème clair";
+     localStorage.setItem('theme', 'sombre');
 }
 
-// localStorage.clear()
+button.addEventListener("click", () => {
+     if(document.body.classList.contains('dark')) {
+          // Mode clair
+          document.body.className = '';
+          span.textContent = "Thème sombre";
+          localStorage.setItem('theme', 'clair');
+     } else {
+          // Mode sombre
+          modeSombre();
+     }
+})
+
+
