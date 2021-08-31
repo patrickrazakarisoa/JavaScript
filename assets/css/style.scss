@@ -34,9 +34,10 @@ font-size: 4em;
      content: '';
      position: absolute;
      top: 2em;
-     right: -95em;
+     right: -75em;
      height: 400px;
      width: 400px;
+     // z-index: -1;
      border-radius: 50%;
      background: #6DD5FA;
      box-shadow: inset -5px 0px 20px 0px white,
@@ -63,13 +64,14 @@ font-size: 4em;
 }
 
 .circle{
+     // z-index: -1;
      position: absolute;
      top: 2em;
      left: 2em;
      height: 100px;
      width: 100px;
      border-radius: 50%;
-     // background: #161805;
+     // background: transparent;
      box-shadow: inset -5px 0px 20px 0px white,
                  inset -28px 0px 30px -5px rgba(65, 189, 65, 0.8), 
                        -60px 0px 80px 30px rgba(25, 24, 24, 0.9),
@@ -78,15 +80,21 @@ font-size: 4em;
 }
 
 .meteo {
+     background: transparent;
      margin: auto;
      margin-top: 5em;
-     width: 30%;
+     height: 470px;
+     width: 470px;
      // background: red;
      padding: 50px;
      border-radius: 50%;
      box-shadow: inset -5px 0px 20px 0px white,
                         0px 0px 50px 10px white;
 
+}
+
+#price_label {
+     font-size: 50px;
 }
 
 

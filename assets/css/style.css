@@ -37,7 +37,7 @@ html, body {
   content: '';
   position: absolute;
   top: 2em;
-  right: -95em;
+  right: -75em;
   height: 400px;
   width: 400px;
   border-radius: 50%;
@@ -70,12 +70,18 @@ html, body {
 }
 
 .meteo {
+  background: transparent;
   margin: auto;
   margin-top: 5em;
-  width: 30%;
+  height: 470px;
+  width: 470px;
   padding: 50px;
   border-radius: 50%;
   -webkit-box-shadow: inset -5px 0px 20px 0px white, 0px 0px 50px 10px white;
           box-shadow: inset -5px 0px 20px 0px white, 0px 0px 50px 10px white;
+}
+
+#price_label {
+  font-size: 50px;
 }
 /*# sourceMappingURL=style.css.map */
