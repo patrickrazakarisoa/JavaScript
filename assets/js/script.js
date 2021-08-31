@@ -1,18 +1,17 @@
 // Avec JavaScript
-document.querySelector('h1').prepend('Oh : ');
-document.querySelector('h1').append(' !');
-document.querySelectorAll('p')
+document.querySelector('h1').getAttribute('class');
+document.querySelector('h1').setAttribute('style', 'text-transform:uppercase')
+document.querySelectorAll('p');
 
 
 
 
 // Avec JQuery
-$('h1').prepend('Oh: ');
-$('h1').append(' !');
-$('h1').before('<div>Hello</div>')
-$('h1').after('<div>Hello</div>')
-$('p').remove();
-
+$('h1').attr('class'); // sélectionner un attribute
+$('h1').attr('style', 'text-transform: lowercase');
+$('h1').after('<a href="https://google.com">google</a>');
+$('a').attr('href', 'https://patrickrazakarisoa.com');
+$('p');
 
 
 
