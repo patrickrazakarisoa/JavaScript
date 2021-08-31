@@ -1,5 +1,3 @@
-$yellow : rgb(0, 106, 255);
-
 *{
      margin: 0;
      padding: 0;
@@ -8,25 +6,13 @@ $yellow : rgb(0, 106, 255);
      font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-     // background: rgb(255, 255, 255); 
-     // background: linear-gradient(to right, #d9e298, #6DD5FA, #91157a); 
-     min-width: 300px;
-     transition: all 1s ease-in-out;
+.important {
+     font-size: 1.4em;
+     text-decoration: underline;
+     font-weight: bold;
+     // box-shadow: 0px 0px 20px 5px black;
 }
 
-.dark {
-     background: #1d4c69;
-     // background: linear-gradient(to right, #000000, #182429, #160112); 
-     transition: all 1s ease-in-out;
-     div{
-          color: rgb(255, 255, 255);
-     }
-}
-
-div{
-     color: $yellow;
-}
 
 .circle{
      height: 100px;
@@ -41,24 +27,6 @@ div{
                        -20px 0px 20px 10px rgb(203, 206, 0),
                        -40px 0px 50px 20px rgb(0, 157, 255);
      cursor: pointer;
-}
-
-
-.button {
-     border: 1px;
-     border-radius: 15px;
-     padding: 15px;
-     cursor: pointer;
-     max-height: 50px;
-     min-width: 175px;
-}
-
-.dark button {
-     background: #144098;
-     color: #fff;
-     max-height: 50px;
-     min-width: 175px;
-     transition: all 0.5s ease-in-out;
 }
 
 

@@ -7,24 +7,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  min-width: 300px;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.dark {
-  background: #1d4c69;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.dark div {
-  color: white;
-}
-
-div {
-  color: #006aff;
+.important {
+  font-size: 1.4em;
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .circle {
@@ -37,23 +23,5 @@ div {
   -webkit-box-shadow: inset -5px 0px 20px 0px white, inset -28px 0px 30px -5px rgba(65, 189, 65, 0.8), -60px 0px 80px 30px rgba(25, 24, 24, 0.9), -20px 0px 20px 10px #cbce00, -40px 0px 50px 20px #009dff;
           box-shadow: inset -5px 0px 20px 0px white, inset -28px 0px 30px -5px rgba(65, 189, 65, 0.8), -60px 0px 80px 30px rgba(25, 24, 24, 0.9), -20px 0px 20px 10px #cbce00, -40px 0px 50px 20px #009dff;
   cursor: pointer;
-}
-
-.button {
-  border: 1px;
-  border-radius: 15px;
-  padding: 15px;
-  cursor: pointer;
-  max-height: 50px;
-  min-width: 175px;
-}
-
-.dark button {
-  background: #144098;
-  color: #fff;
-  max-height: 50px;
-  min-width: 175px;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 /*# sourceMappingURL=style.css.map */

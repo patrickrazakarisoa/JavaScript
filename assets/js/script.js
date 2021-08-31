@@ -1,32 +1,28 @@
-const button = document.querySelector("#mode");
-const span   = document.querySelector("span");
+// Avec JavaScript
+document.querySelector('h1').textContent = 'Bonjour avec JavaScript';
+// document.querySelector('#monId').className = 'important';
+// document.querySelector('#monId').className = ''; // pour supprimer une classe "impossible"
+// document.querySelector('h1').style.color = 'steelblue';
 
-// button.addEventListener("click", () => {
-//      document.body.classList.toggle("dark");
-// })
+// document.querySelectorAll('p').textContent = " Ceci est un paragraphe";
+// document.querySelectorAll('p').style.color = "purple"; // impossible
+document.querySelector('.maClass').innerHTML = "<p><b>HTML modifié</b></p>";
 
-if(localStorage.getItem('theme')) {
-     if(localStorage.getItem('theme') == 'sombre') {
-          modeSombre();
-     }
-}
 
-function modeSombre() {
-     document.body.className = 'dark';
-     span.textContent = "Thème clair";
-     localStorage.setItem('theme', 'sombre');
-}
 
-button.addEventListener("click", () => {
-     if(document.body.classList.contains('dark')) {
-          // Mode clair
-          document.body.className = '';
-          span.textContent = "Thème sombre";
-          localStorage.setItem('theme', 'clair');
-     } else {
-          // Mode sombre
-          modeSombre();
-     }
-})
+
+// Avec JQuery
+$('h1').text("Bonjour avec JQuery"); // p, dpnne le sélecteur CSS
+$('h1').css('color', 'orange');
+$('#monId').addClass('important');
+$('#monId').removeClass('important')
+
+// $('p').text("Ceci est un paragraphe");  // on sélectionne tous les paragraphes
+$('p').css('color', 'purple');
+$('.maClass').html('<p><b>HTML modifié avec Jquery</b></p>');
+
+
+
+
 
 
