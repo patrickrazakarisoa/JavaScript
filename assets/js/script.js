@@ -1,17 +1,26 @@
 // Avec JavaScript
-document.querySelector('h1').getAttribute('class');
-document.querySelector('h1').setAttribute('style', 'text-transform:uppercase')
-document.querySelectorAll('p');
+// document.querySelector('h1').addEventListener('click', () => {
+//      document.querySelector('h1').style.color= "orange";
+// });
 
-
-
+// for( let i = 0; i < 2 ; i++) {
+//      document.querySelectorAll('p')[i].addEventListener('click', () => {
+//           document.querySelector('h1').style.color = 'orange';
+//      });
+// }
 
 // Avec JQuery
-$('h1').attr('class'); // sélectionner un attribute
-$('h1').attr('style', 'text-transform: lowercase');
-$('h1').after('<a href="https://google.com">google</a>');
-$('a').attr('href', 'https://patrickrazakarisoa.com');
-$('p');
+// $('h1').click( () => {
+//      $('h1').css('color', 'red');
+// });
+
+$('p').click(() => {
+     $('h1').css('color', 'orange');
+});
+
+$('h1').on('mouseover', () => {
+     $('#monId').addClass('important');
+})
 
 
 
