@@ -59,14 +59,44 @@ html, body {
 }
 
 .circle {
+  border: none;
   position: absolute;
   top: 2em;
   left: 2em;
   height: 100px;
   width: 100px;
   border-radius: 50%;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   -webkit-box-shadow: inset -5px 0px 20px 0px white, inset -28px 0px 30px -5px rgba(65, 189, 65, 0.8), -60px 0px 80px 30px rgba(25, 24, 24, 0.9), -20px 0px 20px 10px #cbce00, -40px 0px 50px 20px #009dff;
           box-shadow: inset -5px 0px 20px 0px white, inset -28px 0px 30px -5px rgba(65, 189, 65, 0.8), -60px 0px 80px 30px rgba(25, 24, 24, 0.9), -20px 0px 20px 10px #cbce00, -40px 0px 50px 20px #009dff;
+}
+
+.circle:hover {
+  opacity: 0.9;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  background: black;
+  -webkit-box-shadow: inset -5px 40px 50px 10px #3d137b;
+          box-shadow: inset -5px 40px 50px 10px #3d137b;
+}
+
+.circle:focus {
+  opacity: 0.5;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  background: red;
+  height: 250px;
+  width: 250px;
+}
+
+.circle:active {
+  opacity: 0.5;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+  background: #0c802d;
+  height: 200px;
+  width: 200px;
 }
 
 .meteo {

@@ -45,6 +45,7 @@ font-size: 4em;
                        60px 0px 80px 30px rgba(25, 24, 24, 0.9),
                        20px 0px 20px 10px rgb(203, 206, 0),
                        40px 0px 80px 40px rgb(6, 94, 148);
+    
 }
 
 .circle::after{
@@ -64,19 +65,43 @@ font-size: 4em;
 }
 
 .circle{
-     // z-index: -1;
+     border: none;
      position: absolute;
      top: 2em;
      left: 2em;
      height: 100px;
      width: 100px;
      border-radius: 50%;
+     transition: all 1s ease-in-out;
      // background: transparent;
      box-shadow: inset -5px 0px 20px 0px white,
                  inset -28px 0px 30px -5px rgba(65, 189, 65, 0.8), 
                        -60px 0px 80px 30px rgba(25, 24, 24, 0.9),
                        -20px 0px 20px 10px rgb(203, 206, 0),
                        -40px 0px 50px 20px rgb(0, 157, 255);
+     &:hover  {
+          opacity: 0.9;
+          transition: all 1s ease-in-out;
+          background: black;
+          box-shadow: inset -5px 40px 50px 10px rgb(61, 19, 123),
+     }
+
+     &:focus {
+          opacity: 0.5;
+          transition: all 2s ease-in-out;
+          background: red;
+          height: 250px;
+          width: 250px;
+
+     }
+
+     &:active {
+          opacity: 0.5;
+          transition: all 2s ease-in-out;
+          background: rgb(12, 128, 45);
+          height: 200px;
+          width: 200px;
+     }
 }
 
 .meteo {
