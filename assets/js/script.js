@@ -1,32 +1,13 @@
-// Vérifier que la géolocalisation soit disponible
-if( 'geolocation' in navigator) {
+// Inscription ?
 
-     // getCurrentPosition() ou watchPosition()
-     // success, error, options
+// Attention: serveur (https)
 
-     let options = {
-          enableHighAccuracy  : true,
-          // maximumAge          : 0,
-          setTimeout          : 10000,
-     }
+// test.js
+import { direBonjour } from './test';
 
-     let watch =  
-     navigator.geolocation.watchPosition((position) => {
-          console.log(position.coords.latitude);
-          console.log(position.coords.longitude);
-     }, error, options);
+direBonjour('John')
 
-     navigator.geolocation.clearWatch(watch);
-
-
-     // navigator.geolocation.getCurrentPosition((position) => {
-     //      console.log(position.coords.latitude);
-     //      console.log(position.coords.longitude);
-     // }, error, options);
-
-     function error() {
-          alert("Vous avez refusé la géolocalisation.")
-     }
-} else {
-     alert ("La géolocalisation ne peut pas être utilisée.");
-}
+// modules/direBonjour.js
+// export direBonjour(prenom) {
+//      console.log('Bonjour ' + prenom);
+// }
