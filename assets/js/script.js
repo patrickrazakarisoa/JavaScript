@@ -1,13 +1,32 @@
-$('h1').hide();
-$('h1').show();
+// Vérifier que la géolocalisation soit disponible
+if( 'geolocation' in navigator) {
 
-$('p').click(() => {
-     // $('h1').toggle();
-     // $('h1').fadeToggle();
-     // $('h1').slideToggle();
-     // $('h1').animate({ // seulement avec les valeurs numériques
-     //      opacity: .7,
-     //      margin: 30
-     // });
-     $('h1').slideUp().slideDown().animate({opacity: .7, margin:50});
-})
+     // getCurrentPosition() ou watchPosition()
+     // success, error, options
+
+     let options = {
+          enableHighAccuracy  : true,
+          // maximumAge          : 0,
+          setTimeout          : 10000,
+     }
+
+     let watch =  
+     navigator.geolocation.watchPosition((position) => {
+          console.log(position.coords.latitude);
+          console.log(position.coords.longitude);
+     }, error, options);
+
+     navigator.geolocation.clearWatch(watch);
+
+
+     // navigator.geolocation.getCurrentPosition((position) => {
+     //      console.log(position.coords.latitude);
+     //      console.log(position.coords.longitude);
+     // }, error, options);
+
+     function error() {
+          alert("Vous avez refusé la géolocalisation.")
+     }
+} else {
+     alert ("La géolocalisation ne peut pas être utilisée.");
+}
