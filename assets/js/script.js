@@ -1,13 +1,21 @@
-// Inscription ?
+// Le mode strict: toujours début
+// "use strict";
 
-// Attention: serveur (https)
+prenom = "John";
+console.log(prenom)
 
-// test.js
-import { direBonjour } from './test';
+direBonjour();
 
-direBonjour('John')
+function direBonjour() {
+     // "use strict";
+     nom = "Doe";
+     console.log(nom);
+}
 
-// modules/direBonjour.js
-// export direBonjour(prenom) {
-//      console.log('Bonjour ' + prenom);
-// }
+function addition(nombreA, nombreA) {
+     "use strict";
+     console.log(nombreA + nombreA);
+}
+
+addition(7, 2);
+
