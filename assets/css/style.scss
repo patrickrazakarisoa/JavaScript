@@ -1,18 +1,18 @@
-* {
-     margin: 0px;
-     padding: 0px;
-     box-sizing: border-box;
-     font-family: sans-serif;
-}
+html, body {
+     background: #2980B9;
+     background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
+     min-width: 400px;
+   }
    
-body {
-     background: linear-gradient(to right, #1cc11c, #fffa73, #8c0202);
-}
-
-h1 {
-     text-align: center;
-     margin-top: 18%;
-     color: saddlebrown;
-     text-shadow: 2px 2px 4px black;
+   #ville {
+     text-transform: capitalize;
+   }
+   
+   #temperature {
      font-size: 4em;
-}
+   }
+   
+   #changer {
+     background: rgba(178, 223, 251, .3);
+     cursor: pointer;
+   }
