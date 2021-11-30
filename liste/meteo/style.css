@@ -1,0 +1,45 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     background: #2980B9;
+     /* background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); */
+     background: linear-gradient(to right, #d9e298, #6DD5FA, #91157a);
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+
+#ville {
+     text-transform: capitalize;
+     font-size: 2em;
+}
+
+#temperature {
+font-size: 4em;
+}
+
+#changer {
+     margin: auto;
+     width: 200px;
+     text-align: center;
+     padding: 1em;
+     border-radius: 5px;
+     background: rgba(178, 223, 251, .3);
+     box-shadow: 10px 10px 20px 0px rgba(19, 141, 253, 0.5), inset 2px 2px 20px 2px rgba(19, 132, 203, 0.5);
+     cursor: pointer;
+}
+
+
+h1{
+     text-align: center;
+}
+
+.city{
+     text-align: center;
+}

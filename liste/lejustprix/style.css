@@ -1,0 +1,60 @@
+html{
+     background-color: rgb(41, 40, 40);
+}
+
+.title{
+     margin: 5em 0 2em 0;
+
+}
+
+header {
+     background-color: rgb(41, 40, 40);
+     color: #ff7315;
+     text-align: center;
+     font-size: 3em;
+}
+
+
+#instructions {
+     color: white;
+}
+
+.instruction {
+     padding: 15px;
+     margin: 10px 0;
+}
+
+.plus {
+     background-color: #f67280;
+}
+
+.moins {
+     background-color: #ffa372;
+}
+
+.fini {
+     background-color : #0c9463;
+}
+
+.contenu{
+     margin: auto;
+     width: 50%;
+}
+
+.envelope{
+     padding: 2em;
+}
+
+.taille{
+     background-color: rgb(213, 213, 213);
+     border-radius: 10px;
+     box-shadow: 0px 0 10px 2px rgb(150, 150, 150);
+
+}
+
+.dflex{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+}

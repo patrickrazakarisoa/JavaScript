@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #5C258D;
+  background: -webkit-linear-gradient(to right, #4389A2, #5C258D);
+  background: linear-gradient(to right, #4389A2, #5C258D);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#citation {
+  font-size: 1.3em;
+  font-family: 'Satisfy', curve;
+  line-height: 1.3em;
+  letter-spacing: 0.5px;
+}
+
+#citation:before {
+    content: open-quote;
+}
+
+#citation:after {
+    content: close-quote;
+}
+
+#auteur {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+#nouveau {
+  background: #ff9966;
+  background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);
+  background: linear-gradient(to right, #ff5e62, #ff9966);
+  cursor: pointer;
+}
+
+.moi{
+  margin-top: -2em;
+  width: 1000px;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#moi{
+  width: 100%;
+  height: auto;
+}
+
+#moi2{
+  height: 520px;
+}
